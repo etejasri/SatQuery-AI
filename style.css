@@ -1,0 +1,297 @@
+/* ================================
+   SatQuery AI - Main Layout
+   ================================ */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f5f7fa;
+    color: #1f2937;
+}
+
+/* Main application layout */
+.app-container {
+    display: flex;
+    min-height: 100vh;
+    width: 100%;
+}
+
+/* ================================
+   LEFT SIDEBAR
+   ================================ */
+
+.sidebar {
+    width: 260px;
+    min-width: 260px;
+    min-height: 100vh;
+    background: #ffffff;
+    border-right: 1px solid #d9dee7;
+    padding: 25px 18px;
+    position: sticky;
+    top: 0;
+    align-self: flex-start;
+}
+
+.sidebar-title {
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.sidebar-subtitle {
+    font-size: 12px;
+    color: #6b7280;
+    margin-bottom: 35px;
+}
+
+/* Navigation buttons */
+.sidebar-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.sidebar-menu button {
+    width: 100%;
+    padding: 13px 15px;
+    border: none;
+    border-radius: 8px;
+    background: #f3f5f8;
+    text-align: left;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.sidebar-menu button:hover {
+    background: #e8f3ff;
+}
+
+/* Project files */
+.project-files {
+    margin-top: 35px;
+    border-top: 1px solid #d9dee7;
+    padding-top: 20px;
+}
+
+.project-files h4 {
+    font-size: 12px;
+    color: #6b7280;
+    margin-bottom: 12px;
+}
+
+/* ================================
+   RIGHT CONTENT AREA
+   ================================ */
+
+.main-content {
+    flex: 1;
+    min-width: 0;
+    padding: 30px;
+    overflow-x: hidden;
+}
+
+/* Every page stays inside right side */
+.page {
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+/* ================================
+   HOME
+   ================================ */
+
+.hero {
+    background: #ffffff;
+    border: 1px solid #dce3eb;
+    border-radius: 16px;
+    padding: 45px;
+    margin-bottom: 25px;
+}
+
+.hero h1 {
+    font-size: 42px;
+    margin: 0 0 15px 0;
+}
+
+.hero h2 {
+    font-size: 22px;
+    margin-bottom: 12px;
+}
+
+.hero p {
+    color: #667085;
+    line-height: 1.6;
+}
+
+/* ================================
+   UPLOAD SECTION
+   ================================ */
+
+.upload-section {
+    background: #ffffff;
+    border: 1px solid #dce3eb;
+    border-radius: 14px;
+    padding: 25px;
+    margin-bottom: 25px;
+}
+
+.upload-row {
+    display: flex;
+    gap: 25px;
+    width: 100%;
+}
+
+.upload-box {
+    flex: 1;
+    min-width: 0;
+}
+
+/* ================================
+   AI ANSWER
+   ================================ */
+
+.answer-section {
+    width: 100%;
+    background: #ffffff;
+    border: 1px solid #dce3eb;
+    border-radius: 14px;
+    padding: 25px;
+    margin-top: 25px;
+}
+
+.answer-section h2 {
+    margin-top: 0;
+}
+
+/* ================================
+   EVIDENCE
+   ================================ */
+
+.evidence-section {
+    width: 100%;
+    background: #ffffff;
+    border: 1px solid #dce3eb;
+    border-radius: 14px;
+    padding: 25px;
+    margin-top: 25px;
+}
+
+.evidence-section img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* ================================
+   BUILDING DETECTION
+   ================================ */
+
+.building-section {
+    width: 100%;
+    background: #ffffff;
+    border: 1px solid #dce3eb;
+    border-radius: 14px;
+    padding: 25px;
+    margin-top: 25px;
+}
+
+/* ================================
+   TOOLS USED
+   ================================ */
+
+.tools-section {
+    width: 100%;
+    background: #ffffff;
+    border: 1px solid #dce3eb;
+    border-radius: 14px;
+    padding: 25px;
+    margin-top: 25px;
+}
+
+/* ================================
+   ANALYZE BUTTON
+   ================================ */
+
+.analyze-button {
+    width: 100%;
+    margin-top: 20px;
+}
+
+/* ================================
+   IMPORTANT:
+   PREVENT COMPONENTS FROM
+   FALLING UNDER THE SIDEBAR
+   ================================ */
+
+.gradio-container {
+    width: 100% !important;
+}
+
+.main-content > * {
+    width: 100%;
+}
+
+/* ================================
+   MOBILE
+   ================================ */
+
+@media (max-width: 800px) {
+
+    .app-container {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+        min-width: 100%;
+        min-height: auto;
+        position: relative;
+    }
+
+    .main-content {
+        width: 100%;
+        padding: 15px;
+    }
+
+    .upload-row {
+        flex-direction: column;
+    }
+
+    .hero {
+        padding: 25px;
+    }
+
+    .hero h1 {
+        font-size: 32px;
+    }
+}
+
+#app-layout {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: flex-start !important;
+    width: 100% !important;
+}
+
+#sidebar {
+    width: 260px !important;
+    min-width: 260px !important;
+    position: sticky !important;
+    top: 0 !important;
+    height: 100vh !important;
+    overflow-y: auto !important;
+}
+
+#main-content {
+    flex: 1 !important;
+    min-width: 0 !important;
+    padding: 25px !important;
+}
+
+#main-content > div {
+    width: 100% !important;
+}
